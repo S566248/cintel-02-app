@@ -70,7 +70,7 @@ def server(input, output, session):
     def insights_output():
         answer = input.language_input()
         count = len(answer)
-        language_string = f'You like {answer}. That takes {count} characters'
+        language_string = f'You like {answer}. That takes {count} characters. This is new.'
         return language_string
 
 # Create a Shiny App by passing in the two parts defined above.
