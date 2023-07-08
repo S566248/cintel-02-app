@@ -25,12 +25,14 @@ app_ui = ui.page_navbar(
                 ui.h3("User Interaction Here"),
                 ui.input_text("name_input", "Enter your name", placeholder="Your Name"),
                 ui.input_text("language_input", "Enter your favorite language(s)", placeholder="Favorite Programming Language(s)"),
+                ui.input_text("season_input", "Enter your favorite season(s)", placeholder="Favorite Season(s)"),
                 ui.tags.hr(),
             ),
             ui.panel_main(
                 ui.h2("Main Panel with Reactive Output"),
                 ui.output_text_verbatim("welcome_output"),
                 ui.output_text_verbatim("insights_output"),
+                ui.output_text_verbatim("insights2_output"),
             ),
         ),
     ),
@@ -71,6 +73,14 @@ def server(input, output, session):
         answer = input.language_input()
         count = len(answer)
         language_string = f'You like {answer}. That takes {count} characters.'
+        return language_string
+    
+    @output
+    @render.text
+    def insights2_output():
+        answer2 = input.season_input()
+        first = answer2[0][0]
+        language_string = f'You enjoy {answer2}. The first character of this is {first}.'
         return language_string
 
 # Create a Shiny App by passing in the two parts defined above.
