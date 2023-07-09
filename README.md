@@ -2,7 +2,7 @@
 
 - Interactive app: [cintel-02-app](https://S566248.shinyapps.io/cintel-02-app/)
 - Repository: [cintel-02-app](https://github.com/S566248/cintel-02-app)
-- Author: [Denise Case](https://github.com/S566248)
+- Author: [Tyler Stanton](https://github.com/S566248)
 
 In this module, we add another important tool: Python. 
 If you are new to Python, don't worry, it's relatively easy to learn and very powerful.
